@@ -1,15 +1,12 @@
-import React from 'react';
-import VideoContent from './VideoContent';
-import VideoInfor from './VideoInfor';
-
-
-function video() {
+import React, { useEffect, useRef, useState } from "react";
+import VideoInfor from "./VideoInfor";
+import VideoContent from "./VideoContent";
+const Video = ({ data }) => {
   return (
-    <div className=' max-w-[600px] p-3'>
-      <VideoInfor/>
-      <VideoContent/>
+    <div className="snap-start max-w-[600px] border-b-2 pb-4 pt-5" >
+      <VideoInfor {...data}/>
+      <VideoContent {...data}/>
     </div>
-  )
-}
-
-export default video
+  );
+};
+export default Video;

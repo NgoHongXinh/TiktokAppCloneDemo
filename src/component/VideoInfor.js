@@ -1,23 +1,23 @@
 import React from 'react';
 import {FaMusic} from 'react-icons/fa'
 
-function VideoInfor() {
+const VideoInfor =({avatar,idName, nickName, content, music})=> {
   return (
     <div className='flex flex-row'>
         <img className='w-[50px] h-[50px] rounded-full mr-3' 
-          src='https://mcdn.coolmate.me/uploads/December2021/cach-tao-video-tiktok-trieu-view.png' 
+          src={avatar} 
           alt=''
         />
         <div className='mr-10'>
           <div className=''>
-            <a href='#' className='text-xl font-bold hover:underline'>name</a>
-            <a href='#' className='text-xl ml-2'>Kenh lap trinh</a>
+            <a href='#' className='text-xl font-bold hover:underline'>{idName}</a>
+            <a href='#' className='text-xl ml-2'>{nickName}</a>
           </div>
           <div className=''>
-            noi dung anh
+            {content}
           </div>
           <div className='flex flex-row items-center'>
-            <FaMusic/><span className='ml-3'>bai hat dang phat</span>
+            <FaMusic/><span className='ml-3'>{music}</span>
           </div>
         </div>
         <div>
